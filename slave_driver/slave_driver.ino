@@ -19,12 +19,12 @@ int main(void)
     while(1)
     {
       // clockwise rotation      
-      PORTC = (0 << PC5) | (1 << PC4) | (0 << PC3) | (1 << PC2);
+      PORTC = (1 << PC5) | (0 << PC4) | (0 << PC3) | (1 << PC2);
     
       _delay_ms(500);
     
       // counter-clockwise rotation
-      PORTC = (1 << PC5) | (0 << PC4) | (1 << PC3) | (0 << PC2);
+      PORTC = (0 << PC5) | (1 << PC4) | (1 << PC3) | (0 << PC2);
     
       _delay_ms(500);
     }
