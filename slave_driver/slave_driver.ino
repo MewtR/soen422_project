@@ -5,7 +5,7 @@ int main(void)
 {
     //Setup outputs
     DDRD = (1 << PD5) | (1 << PD6);                             //D5 D6
-    DDRB = (1 << PB1) | (1 << PB2) | (1 << PB3) | (1 << PB4);   //D9 D10 D11 D12
+    DDRC = (1 << PC2) | (1 << PC3) | (1 << PC4) | (1 << PC5);   //A2 A3 A4 A5
 
      // configure Fast PWM
     TCCR0A = (1 << WGM00) | (1 << WGM01);
@@ -19,12 +19,12 @@ int main(void)
     while(1)
     {
       // clockwise rotation      
-      PORTB = (0 << PB4) | (1 << PB3) | (0 << PB2) | (1 << PB1);
+      PORTC = (0 << PC5) | (1 << PC4) | (0 << PC3) | (1 << PC2);
     
       _delay_ms(500);
     
       // counter-clockwise rotation
-      PORTB = (1 << PB4) | (0 << PB3) | (1 << PB2) | (0 << PB1);
+      PORTC = (1 << PC5) | (0 << PC4) | (1 << PC3) | (0 << PC2);
     
       _delay_ms(500);
     }
