@@ -1,8 +1,6 @@
 import Adafruit_BBIO.GPIO as GPIO
 import time
 
-#Manually configuring SPI
-#Don't think this script is useful
 # Setup pin 14 on P9 to be output
 
 GPIO.setup("P8_10", GPIO.OUT)
