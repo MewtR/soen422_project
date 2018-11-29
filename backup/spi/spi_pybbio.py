@@ -1,5 +1,5 @@
 from bbio import *
-#This library is not supported on this kernel
+#not supported on this kernel
 
 SPI0.open()
 
